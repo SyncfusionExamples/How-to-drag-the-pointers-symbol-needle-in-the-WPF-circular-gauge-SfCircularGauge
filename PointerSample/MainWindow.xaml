@@ -1,0 +1,31 @@
+﻿<Window x:Class="PointerSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PointerSample"
+        mc:Ignorable="d"
+        xmlns:gauge ="clr-namespace:Syncfusion.UI.Xaml.Gauges;assembly=Syncfusion.SfGauge.Wpf"
+        Title="MainWindow" Height="450" Width="800">
+    <gauge:SfCircularGauge >
+        <gauge:SfCircularGauge.Scales >
+            <gauge:CircularScale LabelPosition="Custom"  Grid.Row="1" 
+                                 RimStroke="LightGray" 
+                                 RadiusFactor="1" ShowTicks="False"
+                                 RimStrokeThickness="30"     
+                                 StartValue="0" EndValue="100" Interval="10" 
+                                 LabelOffset="0.75" LabelStroke="Black" FontSize="15">
+                <gauge:CircularScale.Ranges>
+                    <gauge:CircularRange StrokeThickness="30" StartValue="0" 
+                                         x:Name="range" EndValue="25" 
+                                         Stroke="DeepSkyBlue"/>
+                </gauge:CircularScale.Ranges>
+                <gauge:CircularScale.Pointers>
+                    <gauge:CircularPointer  PointerType="NeedlePointer" NeedlePointerType="Triangle" Value="25"
+                           NeedlePointerStroke="DeepSkyBlue" PointerCapDiameter="25" KnobStroke="DeepSkyBlue" KnobFill="DeepSkyBlue"
+                           NeedleLengthFactor="0.7" NeedlePointerStrokeThickness="15" ValueChanged="CircularPointer_ValueChanged" EnableDragging="True"/>
+                </gauge:CircularScale.Pointers>
+            </gauge:CircularScale>
+        </gauge:SfCircularGauge.Scales>
+    </gauge:SfCircularGauge>
+</Window>
