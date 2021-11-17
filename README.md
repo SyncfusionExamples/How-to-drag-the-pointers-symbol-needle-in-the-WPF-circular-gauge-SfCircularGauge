@@ -78,6 +78,7 @@ To construct the above UI along with its dragging animation, please refer the be
         }
 ```
 
+KB article - [How to drag the pointers (symbol & needle) in the WPF circular gauge (SfCircularGauge)](https://www.syncfusion.com/kb/11908/how-to-drag-the-symbol-needle-pointers-in-the-wpf-circular-gauge-sfcirculargauge)
 
 ## See also
 
