@@ -2,6 +2,8 @@
 
 This repository explains how to drag both the symbol and needle pointer in the [Syncfusion WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/getting-started) control.
 
+Please refer the KB through this [link](https://www.syncfusion.com/kb/11908/how-to-drag-the-symbol-needle-pointers-in-the-wpf-circular-gauge-sfcirculargauge).
+
 ## Syncfusion controls
 
 This project used the following Syncfusion control(s):
