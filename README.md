@@ -1,96 +1,42 @@
-# How to drag the pointers (symbol & needle) in the WPF circular gauge (SfCircularGauge)
+# How to drag the pointers symbol needle in the WPF circular gauge (SfCircularGauge)
 
-This article explains how to drag the both symbol and needle pointer in the Syncfusion WPF SfCircularGauge control. It has been achieved by setting EnableDragging property as true.
+This repository explains how to drag both the symbol and needle pointer in the [Syncfusion WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/getting-started) control.
 
-## How to drag the symbol pointer 
+Please refer the KB through this [link](https://www.syncfusion.com/kb/11908/how-to-drag-the-symbol-needle-pointers-in-the-wpf-circular-gauge-sfcirculargauge).
 
- ![](SymbolPointerDragging.gif)
+## Syncfusion controls
 
-To obtain the same behavior, please follow the following code snippet
+This project used the following Syncfusion control(s):
+* [SfCircularGauge](https://www.syncfusion.com/wpf-controls/radial-gauge)
 
-[XAML]
+## Requirements to run the sample
 
-```
-    <gauge:SfCircularGauge >
-        <gauge:SfCircularGauge.Scales >
-            <gauge:CircularScale LabelPosition="Custom"  Grid.Row="1" 
-                                 RimStroke="LightGray" 
-                                 RadiusFactor="1" ShowTicks="False"
-                                 RimStrokeThickness="30"     
-                                 StartValue="0" EndValue="100" Interval="10" 
-                                 LabelOffset="0.75" LabelStroke="Black" FontSize="15">
-                <gauge:CircularScale.Ranges>
-                    <gauge:CircularRange StrokeThickness="30" StartValue="0" 
-                                         x:Name="range" EndValue="25" 
-                                         Stroke="DeepSkyBlue"/>
-                </gauge:CircularScale.Ranges>
-                <gauge:CircularScale.Pointers>
-                    <gauge:CircularPointer PointerType="SymbolPointer" 
-                                           Symbol="InvertedTriangle" 
-                                           SymbolPointerHeight="18" SymbolPointerWidth="18"
-                                           ValueChanged="CircularPointer_ValueChanged"  
-                                           SymbolPointerStroke= “DeepSkyBlue" Value="25" 
-                                           EnableAnimation="False" EnableDragging="True"/>
-                </gauge:CircularScale.Pointers>
-            </gauge:CircularScale>
-        </gauge:SfCircularGauge.Scales>
-    </gauge:SfCircularGauge>
-```
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+* .NET Framework 3.5/4.0/4.5/4.5.1/4.6
+* .NET Core 3.1
+* .NET 5.0
 
-## How to drag the needle pointer 
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/wpf/system-requirements)
 
- ![](NeedlePointerDragging.gif)
+## How to run the sample
 
-To construct the above UI along with its dragging animation, please refer the below code snippet
+1. Clone the sample and open it in Visual Studio.
 
- [XAML]
- 
- ```
-    <gauge:SfCircularGauge >
-        <gauge:SfCircularGauge.Scales >
-            <gauge:CircularScale LabelPosition="Custom"  Grid.Row="1" 
-                                 RimStroke="LightGray" 
-                                 RadiusFactor="1" ShowTicks="False"
-                                 RimStrokeThickness="30"     
-                                 StartValue="0" EndValue="100" Interval="10" 
-                                 LabelOffset="0.75" LabelStroke="Black" FontSize="15">
-                <gauge:CircularScale.Ranges>
-                    <gauge:CircularRange StrokeThickness="30" StartValue="0" 
-                                         x:Name="range" EndValue="25" 
-                                         Stroke="DeepSkyBlue"/>
-                </gauge:CircularScale.Ranges>
-                <gauge:CircularScale.Pointers>
-                    <gauge:CircularPointer  PointerType="NeedlePointer" NeedlePointerType="Triangle" Value="25"
-                           NeedlePointerStroke="DeepSkyBlue" PointerCapDiameter="25" KnobStroke="DeepSkyBlue" KnobFill="DeepSkyBlue"
-                           NeedleLengthFactor="0.7" NeedlePointerStrokeThickness="15" ValueChanged="CircularPointer_ValueChanged" EnableDragging="True"/>
-                </gauge:CircularScale.Pointers>
-            </gauge:CircularScale>
-        </gauge:SfCircularGauge.Scales>
-    </gauge:SfCircularGauge>
-```
+   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+   
+2. Register your license key in the App.cs file as demonstrated in the following code.
 
-[C#]
+		public App()
+		{
+			//Register Syncfusion license
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+		}
+		
+	Refer to this [link](https://help.syncfusion.com/wpf/licensing/overview) for more details.
+3. Clean and build the application.
 
-```
-        private void CircularPointer_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            range.EndValue = e.Value;
-        }
-```
+4. Run the application.
 
-KB article - [How to drag the pointers (symbol & needle) in the WPF circular gauge (SfCircularGauge)](https://www.syncfusion.com/kb/11908/how-to-drag-the-symbol-needle-pointers-in-the-wpf-circular-gauge-sfcirculargauge)
+## License
 
-## See also
-
-[How to customize the needle pointer in WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/pointers#needle-pointer)
-
-[How to customize the range pointer in WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/pointers#range-pointer)
-
-[How to customize the symbol pointer in WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/pointers#symbol-pointer)
-
-[How to set the animation for pointer in WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/pointers#setting-animation-for-pointer)
-
-[How to set the multiple pointers in WPF SfCircularGauge](https://help.syncfusion.com/wpf/radial-gauge/pointers#setting-multiple-pointers)
-
-
-
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
